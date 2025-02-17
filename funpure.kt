@@ -12,17 +12,21 @@ class FunFunction {
     fun div(a:Int, b:Int): Int = a/b
 
 
-    /*Es oura, como trabaja con Double no generará un error al dividir por 0 */
+    /*Es pura, como usa Double no generará un error al dividir por 0 */
     fun dic(a:Int, b:Int): Double=a/b
 
     /*No es una funcion pura */
     fun apliPorciento1(a:Int): Int = a/100 * (100 + porciento1)
-    
+    /*Es una funcion pura */
     fun apliPorciento2(a:Int): Int = a/100 * (100 + porciento2)
+    /*No es pura */
     fun apliPorciento3(a:Int): Int = a/100 * (100 + porciento3)
+
+    /*No es una funcion pura */
     fun agrega(i:Int, list:     MutableList<Int>):List<Int>{
         list.add(i)
         return list
     }
+    /*Es pura */
     fun agrega2(i:Int, list : List<Int>) = list +i
 }   
